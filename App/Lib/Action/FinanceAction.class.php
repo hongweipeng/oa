@@ -1,15 +1,5 @@
 <?php
-/*---------------------------------------------------------------------------
- 小微OA系统 - 让工作更轻松快乐
 
- Copyright (c) 2013 http://www.smeoa.com All rights reserved.
-
- Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-
- Author:  jinzhu.yin<smeoa@qq.com>
-
- Support: https://git.oschina.net/smeoa/smeoa
- -------------------------------------------------------------------------*/
 
 class FinanceAction extends CommonAction {
 	protected $config = array('app_type' => 'common', 'action_auth' => array('add_income' => 'write', 'add_payment' => 'write', 'add_transfer' => 'write', 'save_transfer' => 'write', 'account_list' => 'admin', 'add_account' => 'admin', 'read_account' => 'write', 'save_account' => 'admin', 'edit_account' => 'admin', 'del_account' => 'admin'));
