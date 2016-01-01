@@ -1,76 +1,46 @@
 
 <layout name='Layout/ace_page' />
-<div class="container">
-	<!-- /container -->
-	<div class="row">
-		<div class="col-xs-12 hidden-xs" style="margin-top:120px;"> </div>
-	</div>
-	<div class="row">
-		<!--<div class="col-sm-8 hidden-xs">
-			<div class="img"></div>
-		</div>-->
-		<div class="col-sm-4">
-			
-		</div>
-		<div class="col-sm-4">
-			<div style="margin-bottom:44px;margin-top:20px;">
-				<h1 class="text-center">　　{:get_system_config("SYSTEM_NAME")}</h1>
+<link href="__PUBLIC__/css/login.css" rel="stylesheet" />
+<div class="top-content">
+	<div class="inner-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text">
+					<h1><strong>{:get_system_config("SYSTEM_NAME")}</strong> 登录</h1>
+					<div class="description">
+						<p>
+							明理，诚信，博学，远志
+						</p>
+					</div>
+				</div>
 			</div>
-			<form method="post" id="form_login" class="form-horizontal">
-				<div class="form-group">
-					<label class="col-sm-3  control-label" for="emp_no">帐号：</label>
-					<div class="col-sm-9">
-						<input class="form-control" id="emp_no" name="emp_no" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3  control-label" for="password">密码：</label>
-					<div class="col-sm-9">
-						<input class="form-control" id="password" type="password" name="password" />
-					</div>
-				</div>
-				<notempty name="is_verify_code">
-					<div class="form-group">
-						<label class="col-sm-3  control-label" for="verify">验证码：</label>
-						<div class="col-sm-9 row">
-							<div class="col-xs-8">
-								<input class="form-control" id="verify" name="verify" />
-							</div>
-							<div class="col-xs-4">
-								<img src='__URL__/verify' / style='cursor:pointer' title='刷新验证码' id='verifyImg' onclick='freshVerify()'>
-							</div>
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3 form-box">
+					<div class="form-top">
+						<div class="form-top-left">
+							<h3>登录系统</h3>
+							<p>输入用户名与密码</p>
+						</div>
+						<div class="form-top-right">
+							<i class="fa fa-key"></i>
 						</div>
 					</div>
-				</notempty>
-				<div class="form-group display-none">
-					<span class="col-sm-3  control-label"> </span>
-					<div class="col-sm-9">
-						<label class="inline pull-left col-3">
-							<input class="ace" type="checkbox" name="remember" value="1" />
-							<span class="lbl"> </span> </label>
-						<label for="remember-me">记住我的登录状态</label>
+					<div class="form-bottom">
+						<form class="login-form" method="post" action="{:U('login/check_login')}" role="form">
+							<div class="form-group">
+								<input type="text" name="emp_no" class="form-username form-control" placeholder="用户名..." name="form-username">
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" class="form-password form-control" placeholder="密码..." name="form-password">
+							</div>
+							<div class="form-group">
+								用户名：admin 密码：admin
+							</div>
+							<button class="btn btn-primary" type="submit">登 录</button>
+						</form>
 					</div>
 				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-3 col-sm-9 text-center">
-						<input type="button" value="登录" onclick="login();" class="btn btn-sm btn-primary col-10">
-					</div>
-				</div>
-			</form>
-			<p>
-				用户名：admin 密码：admin
-			</p>
-			<p>
-				&nbsp;
-			</p>
-			<p>
-				&nbsp;
-			</p>
+			</div>
 		</div>
 	</div>
-	<!--<div class="row">
-		<div class="col-sm-12 text-right">
-			<span>技术支持：<a href="http://www.w2fzu.com" target="_blank">西二在线</a></span>&nbsp;&nbsp;<span></span>
-		</div>
-	</div>-->
 </div>
