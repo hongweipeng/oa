@@ -1113,20 +1113,7 @@ blockquote.pull-right {
 .navbar {
   margin-bottom: 0;
 }
-.navbar {
-  margin-left: 0;
-  margin-right: 0;
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-radius: 0;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
-  min-height: 45px;
-  position: relative;
-  background: rgba(218,37,29,0.7);
-}
+
 .navbar > .container {
   padding-left: 0;
   padding-right: 0;
@@ -1136,7 +1123,6 @@ blockquote.pull-right {
   color: #ffffff;
 }
 .navbar .navbar-brand {
-  color: #ffffff;
   font-size: 24px;
   text-shadow: none;
   padding-top: 10px;
@@ -1152,9 +1138,7 @@ blockquote.pull-right {
 .navbar .navbar-nav > li > a,
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
-  font-size: 13px;
   text-shadow: none;
-  color: #ffffff;
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
