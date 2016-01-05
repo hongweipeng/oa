@@ -1,22 +1,22 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : conn
-Source Server Version : 50617
+Source Server         : localhost
+Source Server Version : 50524
 Source Host           : localhost:3306
 Source Database       : web_oa
 
 Target Server Type    : MYSQL
-Target Server Version : 50617
+Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2016-01-04 23:58:10
+Date: 2016-01-05 18:28:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for `oa_contact`
+-- Table structure for oa_contact
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_contact`;
 CREATE TABLE `oa_contact` (
@@ -50,7 +50,7 @@ INSERT INTO `oa_contact` VALUES ('23', '1234124123', '', '123', '1231', '12', '3
 INSERT INTO `oa_contact` VALUES ('24', '132', '', '', '', '', '123@13.com', '21331', '', '', '', '', '1', '', '1');
 
 -- ----------------------------
--- Table structure for `oa_customer`
+-- Table structure for oa_customer
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_customer`;
 CREATE TABLE `oa_customer` (
@@ -81,7 +81,7 @@ INSERT INTO `oa_customer` VALUES ('29', '名称', 'MC', '之间', '教程', '路
 INSERT INTO `oa_customer` VALUES ('30', '名称', 'MC', '是', '搜索', '是', '是', '是', '', '', '', '', '', '0', '', '0', '是');
 
 -- ----------------------------
--- Table structure for `oa_daily_report`
+-- Table structure for oa_daily_report
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_daily_report`;
 CREATE TABLE `oa_daily_report` (
@@ -126,7 +126,7 @@ INSERT INTO `oa_daily_report` VALUES ('46', '1', '管理员', '1', '小微企业
 INSERT INTO `oa_daily_report` VALUES ('47', '1', '管理员', '1', '小微企业', '1421215819', 'ssdfsdf', null, '1', null, '', null, null, null, null, null, null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for `oa_daily_report_comment`
+-- Table structure for oa_daily_report_comment
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_daily_report_comment`;
 CREATE TABLE `oa_daily_report_comment` (
@@ -153,7 +153,7 @@ INSERT INTO `oa_daily_report_comment` VALUES ('67', '44', '', 'ccccccccccc', '1'
 INSERT INTO `oa_daily_report_comment` VALUES ('68', '44', '', 'XXXXXXXXXXXXXXXX', '1', '管理员', '', '0', '1421216758', '0', null, null);
 
 -- ----------------------------
--- Table structure for `oa_daily_report_detail`
+-- Table structure for oa_daily_report_detail
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_daily_report_detail`;
 CREATE TABLE `oa_daily_report_detail` (
@@ -204,7 +204,7 @@ INSERT INTO `oa_daily_report_detail` VALUES ('189', '44', null, '主要工作事
 INSERT INTO `oa_daily_report_detail` VALUES ('190', '44', null, 'XXXXXXX', '', '00:00', '00:00', '2', null, 'A', '0');
 
 -- ----------------------------
--- Table structure for `oa_dept`
+-- Table structure for oa_dept
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_dept`;
 CREATE TABLE `oa_dept` (
@@ -237,7 +237,7 @@ INSERT INTO `oa_dept` VALUES ('25', '8', 'KJK', '16', '会计科', '会计', '',
 INSERT INTO `oa_dept` VALUES ('26', '8', 'JRK', '16', '金融科', '金融', '', '', '0');
 
 -- ----------------------------
--- Table structure for `oa_dept_grade`
+-- Table structure for oa_dept_grade
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_dept_grade`;
 CREATE TABLE `oa_dept_grade` (
@@ -257,7 +257,7 @@ INSERT INTO `oa_dept_grade` VALUES ('16', 'DG1', '科', '1', '0');
 INSERT INTO `oa_dept_grade` VALUES ('18', 'DG2', '部', '2', '0');
 
 -- ----------------------------
--- Table structure for `oa_doc`
+-- Table structure for oa_doc
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_doc`;
 CREATE TABLE `oa_doc` (
@@ -273,14 +273,15 @@ CREATE TABLE `oa_doc` (
   `update_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
   `is_del` tinyint(3) NOT NULL DEFAULT '0' COMMENT '删除标记',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oa_doc
 -- ----------------------------
+INSERT INTO `oa_doc` VALUES ('87', '2016-0001', '虎豹骑海外论坛疑问点', '虎豹骑海外论坛疑问点<strong></strong>', '66', '988ccfa5b8cb98dc18cf0841e2dc8435;', '1', '管理员', '1451975748', '0', '0');
 
 -- ----------------------------
--- Table structure for `oa_duty`
+-- Table structure for oa_duty
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_duty`;
 CREATE TABLE `oa_duty` (
@@ -303,7 +304,7 @@ INSERT INTO `oa_duty` VALUES ('17', 'TASK_ASSIGN', '任务分配', '1', '0', '')
 INSERT INTO `oa_duty` VALUES ('18', 'SHOW_LOG', '日志查看', '1', '0', '');
 
 -- ----------------------------
--- Table structure for `oa_file`
+-- Table structure for oa_file
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_file`;
 CREATE TABLE `oa_file` (
@@ -319,7 +320,7 @@ CREATE TABLE `oa_file` (
   `is_del` tinyint(3) NOT NULL DEFAULT '0' COMMENT '删除标记',
   PRIMARY KEY (`id`),
   KEY `sid` (`sid`,`module`)
-) ENGINE=MyISAM AUTO_INCREMENT=1732 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1735 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oa_file
@@ -397,9 +398,12 @@ INSERT INTO `oa_file` VALUES ('1728', 'c0098814bbd816de8c17b1e6e00aea42', '1.jpg
 INSERT INTO `oa_file` VALUES ('1729', '2ebf10ceda0c80714685f81bc660965f', '2.jpg', 'dailyreport/201501/54af915c5ad15.jpg', '432862', 'jpg', 'DailyReport', '1', '1420792156', '0');
 INSERT INTO `oa_file` VALUES ('1730', 'eda6c74034ffc698dbd7e2d58f871344', '3.jpg', 'dailyreport/201501/54af915ca2eb6.jpg', '453267', 'jpg', 'DailyReport', '1', '1420792156', '0');
 INSERT INTO `oa_file` VALUES ('1731', '60823b8b99b29e228a972637f1872cac', '4.jpg', 'dailyreport/201501/54af915ce9020.jpg', '600890', 'jpg', 'DailyReport', '1', '1420792156', '0');
+INSERT INTO `oa_file` VALUES ('1732', '073020505478f2fac36db61fecd1d030', '多啦A梦.jpg', 'popup/201601/568b62a12b019.jpg', '40395', 'jpg', 'Popup', '1', '1451975329', '0');
+INSERT INTO `oa_file` VALUES ('1733', '1df9d493ba854926f3a6b56dd6fa8b26', '多啦A梦.jpg', 'popup/201601/568b635289c4b.jpg', '40395', 'jpg', 'Popup', '1', '1451975506', '0');
+INSERT INTO `oa_file` VALUES ('1734', '988ccfa5b8cb98dc18cf0841e2dc8435', '虎豹骑海外论坛疑问点.doc', 'doc/201601/568b6434056b3.doc', '155136', 'doc', 'Doc', '1', '1451975732', '0');
 
 -- ----------------------------
--- Table structure for `oa_finance`
+-- Table structure for oa_finance
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_finance`;
 CREATE TABLE `oa_finance` (
@@ -433,7 +437,7 @@ INSERT INTO `oa_finance` VALUES ('30', '123123', '2014-10-29', '3', null, '11', 
 INSERT INTO `oa_finance` VALUES ('31', '123123', '2014-10-29', '4', '11', null, null, '转账', null, null, '11', '1', '管理员', '1415004900', null, '由[农行]转入[11]', '', '3', '0', null);
 
 -- ----------------------------
--- Table structure for `oa_finance_account`
+-- Table structure for oa_finance_account
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_finance_account`;
 CREATE TABLE `oa_finance_account` (
@@ -457,7 +461,7 @@ INSERT INTO `oa_finance_account` VALUES ('3', '农行', '11111', '111111', '0', 
 INSERT INTO `oa_finance_account` VALUES ('4', '民生', '1', '2', '0', '4', '', '0');
 
 -- ----------------------------
--- Table structure for `oa_flow`
+-- Table structure for oa_flow
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_flow`;
 CREATE TABLE `oa_flow` (
@@ -492,7 +496,7 @@ CREATE TABLE `oa_flow` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_flow_field`
+-- Table structure for oa_flow_field
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_flow_field`;
 CREATE TABLE `oa_flow_field` (
@@ -545,7 +549,7 @@ INSERT INTO `oa_flow_field` VALUES ('54', '简易编辑器', '37', '', '', 'simp
 INSERT INTO `oa_flow_field` VALUES ('55', '编辑器', '37', '', '', 'editor', '2', '', '');
 
 -- ----------------------------
--- Table structure for `oa_flow_field_data`
+-- Table structure for oa_flow_field_data
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_flow_field_data`;
 CREATE TABLE `oa_flow_field_data` (
@@ -588,7 +592,7 @@ INSERT INTO `oa_flow_field_data` VALUES ('230', '34', '1');
 INSERT INTO `oa_flow_field_data` VALUES ('230', '35', '');
 
 -- ----------------------------
--- Table structure for `oa_flow_log`
+-- Table structure for oa_flow_log
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_flow_log`;
 CREATE TABLE `oa_flow_log` (
@@ -612,7 +616,7 @@ CREATE TABLE `oa_flow_log` (
 INSERT INTO `oa_flow_log` VALUES ('312', '230', '2001', '42', '总监2001', '21', null, '1418830595', '0', null, '0');
 
 -- ----------------------------
--- Table structure for `oa_flow_type`
+-- Table structure for oa_flow_type
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_flow_type`;
 CREATE TABLE `oa_flow_type` (
@@ -644,7 +648,7 @@ CREATE TABLE `oa_flow_type` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_forum`
+-- Table structure for oa_forum
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_forum`;
 CREATE TABLE `oa_forum` (
@@ -673,7 +677,7 @@ INSERT INTO `oa_forum` VALUES ('25', '53', '1', '管理员', 'sssssss', 'sssssss
 INSERT INTO `oa_forum` VALUES ('26', '52', '1', '管理员', '123', '456789', '38', '1', '0', '', '0', '1405338400', '0', '0', '1');
 
 -- ----------------------------
--- Table structure for `oa_forum_post`
+-- Table structure for oa_forum_post
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_forum_post`;
 CREATE TABLE `oa_forum_post` (
@@ -701,7 +705,7 @@ INSERT INTO `oa_forum_post` VALUES ('57', '26', '', 'asdfasdf', '0', '', '', '0'
 INSERT INTO `oa_forum_post` VALUES ('58', '26', '465465465', '<p>\r\n	<img src=\"/Data/Files/forum/201407/53c3d6855b0ee.jpg\" alt=\"\" />11111111111\r\n</p>\r\n<p>\r\n	<br />\r\n</p>\r\n<p>\r\n	<br />\r\n</p>\r\n<p>\r\n	<br />\r\n</p>\r\n<p>\r\n	1111111\r\n</p>', '1', '管理员', '', '1', '1405341713', '1405343556');
 
 -- ----------------------------
--- Table structure for `oa_info`
+-- Table structure for oa_info
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_info`;
 CREATE TABLE `oa_info` (
@@ -725,7 +729,7 @@ CREATE TABLE `oa_info` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_info_sign`
+-- Table structure for oa_info_sign
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_info_sign`;
 CREATE TABLE `oa_info_sign` (
@@ -744,7 +748,7 @@ CREATE TABLE `oa_info_sign` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_mail`
+-- Table structure for oa_mail
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_mail`;
 CREATE TABLE `oa_mail` (
@@ -766,14 +770,15 @@ CREATE TABLE `oa_mail` (
   `is_del` tinyint(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `mid` (`mid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2027 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2028 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oa_mail
 -- ----------------------------
+INSERT INTO `oa_mail` VALUES ('2027', '3', null, 'dsa', 'fdsf', '', '管理员|123', '总经理1001/总经理||44;', '管理员|123', '', '0', '1', '管理员', '1451978725', '0', '0');
 
 -- ----------------------------
--- Table structure for `oa_mail_account`
+-- Table structure for oa_mail_account
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_mail_account`;
 CREATE TABLE `oa_mail_account` (
@@ -790,10 +795,10 @@ CREATE TABLE `oa_mail_account` (
 -- ----------------------------
 -- Records of oa_mail_account
 -- ----------------------------
-INSERT INTO `oa_mail_account` VALUES ('1', '123', '小微OA', '123', '23', '23', '123');
+INSERT INTO `oa_mail_account` VALUES ('1', '123', '管理员', '123', '23', '23', '123');
 
 -- ----------------------------
--- Table structure for `oa_mail_organize`
+-- Table structure for oa_mail_organize
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_mail_organize`;
 CREATE TABLE `oa_mail_organize` (
@@ -822,7 +827,7 @@ CREATE TABLE `oa_mail_organize` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_message`
+-- Table structure for oa_message
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_message`;
 CREATE TABLE `oa_message` (
@@ -871,7 +876,7 @@ INSERT INTO `oa_message` VALUES ('76', 'asdfasdfasdf', '', '1', '管理员', '1'
 INSERT INTO `oa_message` VALUES ('77', 'asdfasdfasdf', '', '1', '管理员', '1', '管理员', '1415006873', '1', '0', '0');
 
 -- ----------------------------
--- Table structure for `oa_monthly_report`
+-- Table structure for oa_monthly_report
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_monthly_report`;
 CREATE TABLE `oa_monthly_report` (
@@ -896,7 +901,7 @@ CREATE TABLE `oa_monthly_report` (
 INSERT INTO `oa_monthly_report` VALUES ('43', '1', '管理员', '1', '小微企业', '1421056094', '444', '', '0', '0', '', '2015-01-12');
 
 -- ----------------------------
--- Table structure for `oa_monthly_report_comment`
+-- Table structure for oa_monthly_report_comment
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_monthly_report_comment`;
 CREATE TABLE `oa_monthly_report_comment` (
@@ -920,7 +925,7 @@ CREATE TABLE `oa_monthly_report_comment` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_monthly_report_detail`
+-- Table structure for oa_monthly_report_detail
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_monthly_report_detail`;
 CREATE TABLE `oa_monthly_report_detail` (
@@ -949,7 +954,7 @@ INSERT INTO `oa_monthly_report_detail` VALUES ('168', '43', null, '66', '', '', 
 INSERT INTO `oa_monthly_report_detail` VALUES ('169', '43', null, '66', '', '', '', '2', null, '', '0');
 
 -- ----------------------------
--- Table structure for `oa_news`
+-- Table structure for oa_news
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_news`;
 CREATE TABLE `oa_news` (
@@ -973,7 +978,7 @@ CREATE TABLE `oa_news` (
 INSERT INTO `oa_news` VALUES ('85', '2014-0001', '产品名称', '<p>\r\n	111111111156523169321564856351\r\n</p>\r\n<p>\r\n	325156635132541586352158163541\r\n</p>\r\n<p>\r\n	3541854163558416548546541854654\r\n</p>\r\n<p>\r\n	3548565496854654854654854654853\r\n</p>\r\n<p>\r\n	65416584165863521654165841652146854136524685\r\n</p>\r\n<p>\r\n	5496854968549685496854851465\r\n</p>', '64', '', '1', '管理员', '1408888474', '0', '0');
 
 -- ----------------------------
--- Table structure for `oa_node`
+-- Table structure for oa_node
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_node`;
 CREATE TABLE `oa_node` (
@@ -999,7 +1004,7 @@ INSERT INTO `oa_node` VALUES ('84', '管理', 'user/index', 'fa fa-cogs', '', ''
 INSERT INTO `oa_node` VALUES ('85', '站内信', 'mail/index', 'fa fa-envelope-o bc-mail', '', '', '1', '0', '0');
 INSERT INTO `oa_node` VALUES ('87', '流程', 'flow/index', 'fa fa-pencil bc-flow', '', '', '2', '0', '0');
 INSERT INTO `oa_node` VALUES ('88', '文档', 'doc/index##', 'fa fa-file-o', 'DocFolder', '', '4', '0', '0');
-INSERT INTO `oa_node` VALUES ('91', '日程', 'schedule/index', 'fa fa-calendar bc-personal-schedule', '', '', '9', '198', '0');
+INSERT INTO `oa_node` VALUES ('91', '日程', 'schedule/index', 'fa fa-calendar bc-personal-schedule', '', '', '9', '198', '1');
 INSERT INTO `oa_node` VALUES ('94', '职位', 'position/index', null, null, '', '', '1', '0');
 INSERT INTO `oa_node` VALUES ('97', '部门', 'dept/index', null, null, '', '', '1', '0');
 INSERT INTO `oa_node` VALUES ('100', '写信', 'mail/add', null, '', '', '1', '85', '0');
@@ -1037,7 +1042,7 @@ INSERT INTO `oa_node` VALUES ('150', '提交', 'flow/folder?fid=submit', '', '',
 INSERT INTO `oa_node` VALUES ('152', '待办', 'todo/index', 'fa fa-tasks bc-personal-todo', '', '', '9', '198', '0');
 INSERT INTO `oa_node` VALUES ('153', '部门级别', 'dept_grade/index', null, '', '', '4', '110', '0');
 INSERT INTO `oa_node` VALUES ('156', '客户', 'customer/index', null, '', '', '2', '157', '0');
-INSERT INTO `oa_node` VALUES ('157', '人脉', 'staff/index', 'fa fa-group', '', '', '7', '0', '0');
+INSERT INTO `oa_node` VALUES ('157', '通讯录', 'staff/index', 'fa fa-group', '', '', '7', '0', '0');
 INSERT INTO `oa_node` VALUES ('158', '供应商', 'supplier/index', null, '', '', '3', '157', '0');
 INSERT INTO `oa_node` VALUES ('169', '职员', 'staff/index', null, '', '', '', '157', '0');
 INSERT INTO `oa_node` VALUES ('177', '我的文件夹', '##mail', 'bc-mail-myfolder', 'MailFolder', '', '8', '85', '0');
@@ -1058,7 +1063,7 @@ INSERT INTO `oa_node` VALUES ('193', '修改密码', 'profile/password', '', '',
 INSERT INTO `oa_node` VALUES ('194', '用户设置', 'UserConfig/index', '', '', '', '999', '191', '0');
 INSERT INTO `oa_node` VALUES ('195', '项目', 'xmk/index##', '', 'XmkFolder', '', '1', '197', '0');
 INSERT INTO `oa_node` VALUES ('196', '项目库管理', 'xmk_folder/index', '', '', '', '1', '195', '0');
-INSERT INTO `oa_node` VALUES ('197', '定制', 'xmk/index', 'fa fa-wrench', '', '', '91', '0', '0');
+INSERT INTO `oa_node` VALUES ('197', '定制', 'xmk/index', 'fa fa-wrench', '', '', '91', '0', '1');
 INSERT INTO `oa_node` VALUES ('198', '个人', 'contact/index', 'fa fa-user bc-personal', '', '', '9', '0', '0');
 INSERT INTO `oa_node` VALUES ('199', '产品搜索', 'product/index', '', '', '', '91', '203', '0');
 INSERT INTO `oa_node` VALUES ('200', '产品标签', 'product_type/tag_manage', '', '', '', '91', '203', '0');
@@ -1067,18 +1072,18 @@ INSERT INTO `oa_node` VALUES ('203', '产品', 'product/index##', '', 'ProductFo
 INSERT INTO `oa_node` VALUES ('204', '产品目录', 'product_folder/index', '', '', '', '91', '203', '0');
 INSERT INTO `oa_node` VALUES ('205', '业务角色管理', 'duty/index', '', '', '', '1', '112', '0');
 INSERT INTO `oa_node` VALUES ('206', '业务权限分配', 'role/duty', '', '', '', '3', '112', '0');
-INSERT INTO `oa_node` VALUES ('207', '新闻', 'news/index##', 'fa fa-file-o', 'NewsFolder', '', '4', '0', '0');
+INSERT INTO `oa_node` VALUES ('207', '新闻', 'news/index##', 'fa fa-file-o', 'NewsFolder', '', '4', '0', '1');
 INSERT INTO `oa_node` VALUES ('208', '新闻库管理', 'news_folder/index', '', '', '', 'C1', '207', '0');
 INSERT INTO `oa_node` VALUES ('209', '幻灯片', 'slide/index', 'fa fa-file-o', '', '', '4', '207', '0');
 INSERT INTO `oa_node` VALUES ('211', '周报', 'weekly_report/index', 'fa fa-book', '', '', '2', '182', '0');
 INSERT INTO `oa_node` VALUES ('212', '月报', 'monthly_report/index', 'fa fa-book', '', '', '3', '182', '0');
 INSERT INTO `oa_node` VALUES ('213', '日报', 'daily_report/index', 'fa fa-book', '', '', '1', '182', '0');
-INSERT INTO `oa_node` VALUES ('214', '记账', 'finance/index', 'fa fa-jpy', '', '', 'A1', '0', '0');
+INSERT INTO `oa_node` VALUES ('214', '账本', 'finance/index', 'fa fa-jpy', '', '', 'A1', '0', '0');
 INSERT INTO `oa_node` VALUES ('215', '记账', 'finance/index', 'fa fa-envelope-o bc-mail', '', '', '1', '214', '0');
-INSERT INTO `oa_node` VALUES ('216', '日报', 'task/index', 'fa fa-book', '', '', '6', '0', '0');
+INSERT INTO `oa_node` VALUES ('216', '日报', 'task/index', 'fa fa-book', '', '', '6', '0', '1');
 
 -- ----------------------------
--- Table structure for `oa_notice`
+-- Table structure for oa_notice
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_notice`;
 CREATE TABLE `oa_notice` (
@@ -1101,7 +1106,7 @@ CREATE TABLE `oa_notice` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_notice_sign`
+-- Table structure for oa_notice_sign
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_notice_sign`;
 CREATE TABLE `oa_notice_sign` (
@@ -1123,7 +1128,7 @@ INSERT INTO `oa_notice_sign` VALUES ('69', '50', '1', '45', '管理员', '1', '1
 INSERT INTO `oa_notice_sign` VALUES ('70', '54', '1', '45', '管理员', '1', '1408971416');
 
 -- ----------------------------
--- Table structure for `oa_position`
+-- Table structure for oa_position
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_position`;
 CREATE TABLE `oa_position` (
@@ -1146,7 +1151,7 @@ INSERT INTO `oa_position` VALUES ('5', '01', '总经理', '1', '0');
 INSERT INTO `oa_position` VALUES ('6', '06', '助理', '6', '0');
 
 -- ----------------------------
--- Table structure for `oa_product`
+-- Table structure for oa_product
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_product`;
 CREATE TABLE `oa_product` (
@@ -1174,7 +1179,7 @@ CREATE TABLE `oa_product` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_product_field`
+-- Table structure for oa_product_field
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_product_field`;
 CREATE TABLE `oa_product_field` (
@@ -1195,7 +1200,7 @@ CREATE TABLE `oa_product_field` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_product_field_data`
+-- Table structure for oa_product_field_data
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_product_field_data`;
 CREATE TABLE `oa_product_field_data` (
@@ -1215,7 +1220,7 @@ INSERT INTO `oa_product_field_data` VALUES ('227', '26', 'X');
 INSERT INTO `oa_product_field_data` VALUES ('227', '25', 'X');
 
 -- ----------------------------
--- Table structure for `oa_product_type`
+-- Table structure for oa_product_type
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_product_type`;
 CREATE TABLE `oa_product_type` (
@@ -1236,7 +1241,7 @@ INSERT INTO `oa_product_type` VALUES ('35', '上衣', '上衣', '1403185924', '1
 INSERT INTO `oa_product_type` VALUES ('36', '裤子', '裤子', '1403186100', '1403187896', '0', '0');
 
 -- ----------------------------
--- Table structure for `oa_push`
+-- Table structure for oa_push
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_push`;
 CREATE TABLE `oa_push` (
@@ -1254,7 +1259,7 @@ CREATE TABLE `oa_push` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_rank`
+-- Table structure for oa_rank
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_rank`;
 CREATE TABLE `oa_rank` (
@@ -1276,7 +1281,7 @@ INSERT INTO `oa_rank` VALUES ('4', 'RG10', '助理', '4', '0');
 INSERT INTO `oa_rank` VALUES ('5', 'RG00', '总经理', '0', '0');
 
 -- ----------------------------
--- Table structure for `oa_recent`
+-- Table structure for oa_recent
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_recent`;
 CREATE TABLE `oa_recent` (
@@ -1289,7 +1294,7 @@ CREATE TABLE `oa_recent` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_relation`
+-- Table structure for oa_relation
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_relation`;
 CREATE TABLE `oa_relation` (
@@ -1335,7 +1340,7 @@ INSERT INTO `oa_relation` VALUES ('21', '30', 'Course|Video');
 INSERT INTO `oa_relation` VALUES ('22', '31', 'Course|Video');
 
 -- ----------------------------
--- Table structure for `oa_role`
+-- Table structure for oa_role
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_role`;
 CREATE TABLE `oa_role` (
@@ -1362,7 +1367,7 @@ INSERT INTO `oa_role` VALUES ('7', '领导', '0', '', '2', '1254325787', '140128
 INSERT INTO `oa_role` VALUES ('10', '日志查看', null, '', '', '1421221316', '0', '0');
 
 -- ----------------------------
--- Table structure for `oa_role_duty`
+-- Table structure for oa_role_duty
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_role_duty`;
 CREATE TABLE `oa_role_duty` (
@@ -1382,7 +1387,7 @@ INSERT INTO `oa_role_duty` VALUES ('2', '15');
 INSERT INTO `oa_role_duty` VALUES ('10', '18');
 
 -- ----------------------------
--- Table structure for `oa_role_node`
+-- Table structure for oa_role_node
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_role_node`;
 CREATE TABLE `oa_role_node` (
@@ -1598,7 +1603,7 @@ INSERT INTO `oa_role_node` VALUES ('2', '190', '1', '1', '1');
 INSERT INTO `oa_role_node` VALUES ('7', '182', '1', '1', '1');
 
 -- ----------------------------
--- Table structure for `oa_role_user`
+-- Table structure for oa_role_user
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_role_user`;
 CREATE TABLE `oa_role_user` (
@@ -1658,7 +1663,7 @@ INSERT INTO `oa_role_user` VALUES ('2', '56');
 INSERT INTO `oa_role_user` VALUES ('7', '42');
 
 -- ----------------------------
--- Table structure for `oa_schedule`
+-- Table structure for oa_schedule
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_schedule`;
 CREATE TABLE `oa_schedule` (
@@ -1683,7 +1688,7 @@ INSERT INTO `oa_schedule` VALUES ('74', 'aaaaaaaaaaaaaaaaaaa', 'aaaaaaaaaaaa', '
 INSERT INTO `oa_schedule` VALUES ('75', 'aaaaaaaaaaaaaaaaaaa', 'aaaaaaaaaaaa', '', '3', '', '1', '2014-12-27 22:33:57', '2014-12-04 03:20:00', '', '0');
 
 -- ----------------------------
--- Table structure for `oa_slide`
+-- Table structure for oa_slide
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_slide`;
 CREATE TABLE `oa_slide` (
@@ -1707,7 +1712,7 @@ CREATE TABLE `oa_slide` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_supplier`
+-- Table structure for oa_supplier
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_supplier`;
 CREATE TABLE `oa_supplier` (
@@ -1740,7 +1745,7 @@ INSERT INTO `oa_supplier` VALUES ('22', '1', '', '2', '3', '4', '5', '7', '12312
 INSERT INTO `oa_supplier` VALUES ('23', '234234', '', '112', '312', '3123', '3123', '12', null, '312', '31', '12', '3123', '1', '0', '3123', '231', null);
 
 -- ----------------------------
--- Table structure for `oa_system_config`
+-- Table structure for oa_system_config
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_system_config`;
 CREATE TABLE `oa_system_config` (
@@ -1772,7 +1777,7 @@ INSERT INTO `oa_system_config` VALUES ('17', 'FINANCE_PAYMENT_TYPE', '办公费'
 INSERT INTO `oa_system_config` VALUES ('18', 'FINANCE_PAYMENT_TYPE', '通讯费', '通讯费', '0', '');
 
 -- ----------------------------
--- Table structure for `oa_system_folder`
+-- Table structure for oa_system_folder
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_system_folder`;
 CREATE TABLE `oa_system_folder` (
@@ -1787,14 +1792,15 @@ CREATE TABLE `oa_system_folder` (
   `is_del` tinyint(3) NOT NULL DEFAULT '0',
   `remark` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oa_system_folder
 -- ----------------------------
+INSERT INTO `oa_system_folder` VALUES ('66', '0', 'DocFolder', '虎豹骑论坛项目', '总经理1001/总经理|1001;基于B/S架构的在线OA系统                          |dept_1;', '', '', '', '0', '');
 
 -- ----------------------------
--- Table structure for `oa_system_tag`
+-- Table structure for oa_system_tag
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_system_tag`;
 CREATE TABLE `oa_system_tag` (
@@ -1881,7 +1887,7 @@ INSERT INTO `oa_system_tag` VALUES ('79', '77', 'ProductType', 'B', '', '');
 INSERT INTO `oa_system_tag` VALUES ('80', '0', 'FlowType', '车辆管理', '5', '');
 
 -- ----------------------------
--- Table structure for `oa_system_tag_data`
+-- Table structure for oa_system_tag_data
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_system_tag_data`;
 CREATE TABLE `oa_system_tag_data` (
@@ -1931,7 +1937,7 @@ INSERT INTO `oa_system_tag_data` VALUES ('18', '71', 'FlowType');
 INSERT INTO `oa_system_tag_data` VALUES ('24', '70', 'FlowType');
 
 -- ----------------------------
--- Table structure for `oa_task`
+-- Table structure for oa_task
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_task`;
 CREATE TABLE `oa_task` (
@@ -1959,7 +1965,7 @@ CREATE TABLE `oa_task` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_task_detail`
+-- Table structure for oa_task_detail
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_task_detail`;
 CREATE TABLE `oa_task_detail` (
@@ -1979,7 +1985,7 @@ CREATE TABLE `oa_task_detail` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_task_log`
+-- Table structure for oa_task_log
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_task_log`;
 CREATE TABLE `oa_task_log` (
@@ -2017,7 +2023,7 @@ INSERT INTO `oa_task_log` VALUES ('186', '176', '1', '1', '42', '总监2001', '0
 INSERT INTO `oa_task_log` VALUES ('187', '194', '1', '1', '42', '总监2001', '0', null, null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for `oa_todo`
+-- Table structure for oa_todo
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_todo`;
 CREATE TABLE `oa_todo` (
@@ -2038,7 +2044,7 @@ CREATE TABLE `oa_todo` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_udf_expense`
+-- Table structure for oa_udf_expense
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_udf_expense`;
 CREATE TABLE `oa_udf_expense` (
@@ -2070,7 +2076,7 @@ INSERT INTO `oa_udf_expense` VALUES ('155', '1003', '201310', '李四', '业招�
 INSERT INTO `oa_udf_expense` VALUES ('157', '1003', '201310', '李四', '交通费', '', '', '', '', '', '', '', '', '', '');
 
 -- ----------------------------
--- Table structure for `oa_udf_field`
+-- Table structure for oa_udf_field
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_udf_field`;
 CREATE TABLE `oa_udf_field` (
@@ -2097,7 +2103,7 @@ INSERT INTO `oa_udf_field` VALUES ('58', '呵 3 ', '1', '', '', 'select', '1', '
 INSERT INTO `oa_udf_field` VALUES ('59', 'A1', '33', '', '', 'text', '1', '', '', 'Flow', '0');
 
 -- ----------------------------
--- Table structure for `oa_udf_field_data`
+-- Table structure for oa_udf_field_data
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_udf_field_data`;
 CREATE TABLE `oa_udf_field_data` (
@@ -2117,7 +2123,7 @@ INSERT INTO `oa_udf_field_data` VALUES ('242', '59', 'A4', 'Flow');
 INSERT INTO `oa_udf_field_data` VALUES ('243', '59', 'a6', 'Flow');
 
 -- ----------------------------
--- Table structure for `oa_udf_salary`
+-- Table structure for oa_udf_salary
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_udf_salary`;
 CREATE TABLE `oa_udf_salary` (
@@ -2163,7 +2169,7 @@ INSERT INTO `oa_udf_salary` VALUES ('137', '1002', '201210', '李四', '1000', '
 INSERT INTO `oa_udf_salary` VALUES ('138', '1003', '201210', '张三', '1000', '500', null, '1500', '150', '100', '5', '50', '100', '2200', null);
 
 -- ----------------------------
--- Table structure for `oa_user`
+-- Table structure for oa_user
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_user`;
 CREATE TABLE `oa_user` (
@@ -2196,7 +2202,7 @@ CREATE TABLE `oa_user` (
 -- ----------------------------
 -- Records of oa_user
 -- ----------------------------
-INSERT INTO `oa_user` VALUES ('1', 'admin', '管理员', 'GLY', '21232f297a57a5a743894a0e4a801fc3', '1', '1', '2', 'male', '2013-09-18', '0.0.0.0', '2836', 'emp_pic/1.jpeg', '123', '1231254123123', '5086-2222-2222', '12123123', '1222907803', '1404047349', '0', '1231512315123', '1');
+INSERT INTO `oa_user` VALUES ('1', 'admin', '管理员', 'GLY', '21232f297a57a5a743894a0e4a801fc3', '1', '1', '2', 'male', '2013-09-18', '0.0.0.0', '2840', 'emp_pic/1.jpeg', '123', '1231254123123', '5086-2222-2222', '12123123', '1222907803', '1451975357', '0', '1231512315123', '1');
 INSERT INTO `oa_user` VALUES ('41', '2002', '总监2002', 'ZJ', '4ba29b9f9e5732ed33761840f4ba6c53', '6', '3', '1', 'male', '2013-10-30', '0.0.0.0', null, '', '', '行政，财务', '', '', '1376896154', '1407565312', '1', null, '1');
 INSERT INTO `oa_user` VALUES ('42', '2001', '总监2001', 'ZJ', 'd0fb963ff976f9c37fc81fe03c21ea7b', '8', '3', '1', 'male', '2013-10-10', '127.0.0.1', null, 'emp_pic/42.jpeg', 'smeoa@qq.com', '开发', '123', '12312312', '1380970837', '1401287019', '0', '12312541231251243123', '1');
 INSERT INTO `oa_user` VALUES ('43', '2003', '总监2003', 'ZJ', 'a591024321c5e2bdbd23ed35f0574dde', '7', '3', '1', 'male', '0000-00-00', '127.0.0.1', null, 'emp_pic/43.jpeg', '', '销售', '', '', '1381035116', '1401287063', '0', null, '1');
@@ -2219,7 +2225,7 @@ INSERT INTO `oa_user` VALUES ('66', 'test2', 'test2', 'TEST', '261d684f6b7d9af99
 INSERT INTO `oa_user` VALUES ('67', '1002', '李白', 'LB', 'fba9d88164f3e2d9109ee770223212a0', '5', '4', '1', 'male', '0000-00-00', '0.0.0.0', null, '', '', '', '', '', '1399712207', '1401286925', '0', null, '0');
 
 -- ----------------------------
--- Table structure for `oa_user_config`
+-- Table structure for oa_user_config
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_user_config`;
 CREATE TABLE `oa_user_config` (
@@ -2235,7 +2241,7 @@ CREATE TABLE `oa_user_config` (
 -- ----------------------------
 -- Records of oa_user_config
 -- ----------------------------
-INSERT INTO `oa_user_config` VALUES ('1', 'undefined,14,11,12,22,|undefined,14,24,21,23,13,', '12', '54,55,56,57,58', null, null);
+INSERT INTO `oa_user_config` VALUES ('1', 'undefined,11,12,22,|undefined,14,14,24,21,23,13,', '12', '54,55,56,57,58', null, null);
 INSERT INTO `oa_user_config` VALUES ('49', null, '20', '54,55,56', null, null);
 INSERT INTO `oa_user_config` VALUES ('50', null, '20', '54,55,56', null, null);
 INSERT INTO `oa_user_config` VALUES ('51', null, '20', '54,55,56', null, null);
@@ -2258,7 +2264,7 @@ INSERT INTO `oa_user_config` VALUES ('67', null, '20', '54,55,56', null, null);
 INSERT INTO `oa_user_config` VALUES ('68', null, '20', '54,55,56', null, null);
 
 -- ----------------------------
--- Table structure for `oa_user_folder`
+-- Table structure for oa_user_folder
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_user_folder`;
 CREATE TABLE `oa_user_folder` (
@@ -2281,7 +2287,7 @@ INSERT INTO `oa_user_folder` VALUES ('32', '0', 'MailFolder', '1', '自定义文
 INSERT INTO `oa_user_folder` VALUES ('33', '0', 'MailFolder', '1', '自定义文件夹2', '', '0', '');
 
 -- ----------------------------
--- Table structure for `oa_user_info_base`
+-- Table structure for oa_user_info_base
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_user_info_base`;
 CREATE TABLE `oa_user_info_base` (
@@ -2321,7 +2327,7 @@ CREATE TABLE `oa_user_info_base` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_user_info_tab1`
+-- Table structure for oa_user_info_tab1
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_user_info_tab1`;
 CREATE TABLE `oa_user_info_tab1` (
@@ -2345,7 +2351,7 @@ CREATE TABLE `oa_user_info_tab1` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_user_info_tab2`
+-- Table structure for oa_user_info_tab2
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_user_info_tab2`;
 CREATE TABLE `oa_user_info_tab2` (
@@ -2369,7 +2375,7 @@ CREATE TABLE `oa_user_info_tab2` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_user_info_tab3`
+-- Table structure for oa_user_info_tab3
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_user_info_tab3`;
 CREATE TABLE `oa_user_info_tab3` (
@@ -2396,7 +2402,7 @@ CREATE TABLE `oa_user_info_tab3` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_user_tag`
+-- Table structure for oa_user_tag
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_user_tag`;
 CREATE TABLE `oa_user_tag` (
@@ -2416,7 +2422,7 @@ CREATE TABLE `oa_user_tag` (
 INSERT INTO `oa_user_tag` VALUES ('21', '0', 'Contact', '1', '123', '', '');
 
 -- ----------------------------
--- Table structure for `oa_user_tag_data`
+-- Table structure for oa_user_tag_data
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_user_tag_data`;
 CREATE TABLE `oa_user_tag_data` (
@@ -2431,7 +2437,7 @@ CREATE TABLE `oa_user_tag_data` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_vip`
+-- Table structure for oa_vip
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_vip`;
 CREATE TABLE `oa_vip` (
@@ -2485,7 +2491,7 @@ INSERT INTO `oa_vip` VALUES ('16', '1212121212', '', '', '1212121212', '', '', '
 INSERT INTO `oa_vip` VALUES ('17', '1313131313131313', '', '', '13131313131131313', '', '', '', '1', '金卡', '', '', '', '0000-00-00', '0000-00-00', 'male', '身份证', '123', null, '', null, null, null, '', '');
 
 -- ----------------------------
--- Table structure for `oa_vip_sales`
+-- Table structure for oa_vip_sales
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_vip_sales`;
 CREATE TABLE `oa_vip_sales` (
@@ -2512,7 +2518,7 @@ INSERT INTO `oa_vip_sales` VALUES ('5', '7', 'LA41pl55', '2014-05-19', 'XL', '2'
 INSERT INTO `oa_vip_sales` VALUES ('6', '7', '', '0000-00-00', null, '', '', '', '');
 
 -- ----------------------------
--- Table structure for `oa_weekly_report`
+-- Table structure for oa_weekly_report
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_weekly_report`;
 CREATE TABLE `oa_weekly_report` (
@@ -2539,7 +2545,7 @@ INSERT INTO `oa_weekly_report` VALUES ('43', '1', '管理员', '1', '小微企�
 INSERT INTO `oa_weekly_report` VALUES ('44', '0', null, null, null, null, null, null, '0', '0', null, null, null);
 
 -- ----------------------------
--- Table structure for `oa_weekly_report_comment`
+-- Table structure for oa_weekly_report_comment
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_weekly_report_comment`;
 CREATE TABLE `oa_weekly_report_comment` (
@@ -2565,7 +2571,7 @@ INSERT INTO `oa_weekly_report_comment` VALUES ('66', '43', '', 'ddddddddddddddd'
 INSERT INTO `oa_weekly_report_comment` VALUES ('67', '43', '', 'AAAAAAAAAAAA', '1', '管理员', '', '0', '1421220490', '0', null, null);
 
 -- ----------------------------
--- Table structure for `oa_weekly_report_detail`
+-- Table structure for oa_weekly_report_detail
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_weekly_report_detail`;
 CREATE TABLE `oa_weekly_report_detail` (
@@ -2597,7 +2603,7 @@ INSERT INTO `oa_weekly_report_detail` VALUES ('189', '43', null, '99', '', '', '
 INSERT INTO `oa_weekly_report_detail` VALUES ('190', '43', null, '00', '', '', '', '2', null, '', '0');
 
 -- ----------------------------
--- Table structure for `oa_work_log`
+-- Table structure for oa_work_log
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_work_log`;
 CREATE TABLE `oa_work_log` (
@@ -2621,7 +2627,7 @@ CREATE TABLE `oa_work_log` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_xmk`
+-- Table structure for oa_xmk
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_xmk`;
 CREATE TABLE `oa_xmk` (
@@ -2650,7 +2656,7 @@ CREATE TABLE `oa_xmk` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oa_xmk_report`
+-- Table structure for oa_xmk_report
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_xmk_report`;
 CREATE TABLE `oa_xmk_report` (

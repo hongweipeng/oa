@@ -102,7 +102,7 @@
 			$("#bcc").val($("#bcc").val() + $(this).find("b").text() + '|' + $(this).attr("data") +'|' + $(this).attr("id") + ";");
 		});
 
-		if ($("#to").val().indexOf("@") < 1) {
+		if ($("#to").val() == '') {
 			ui_error("请选择收件人");
 			$("#recever .letter").focus();
 			return false;

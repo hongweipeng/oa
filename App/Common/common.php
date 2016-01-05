@@ -567,7 +567,7 @@ function show_step($step) {
 		return "待审批";
 	}
 	if ($step == 10) {
-		return "临时保管";
+		return "保存草稿";
 	}
 	if ($step == 0) {
 		return "否决";
@@ -1352,7 +1352,7 @@ function finish_rate($rate) {
 
 function is_submit($val) {
 	if ($val == 0) {
-		return "临时保管";
+		return "保存草稿";
 	}
 	if ($val == 1) {
 		return "已提交";
