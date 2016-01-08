@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2016-01-05 18:28:15
+Date: 2016-01-08 10:40:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -854,8 +854,8 @@ INSERT INTO `oa_message` VALUES ('54', '2222222222222', '', '42', '总监2001', 
 INSERT INTO `oa_message` VALUES ('55', '2222222222222', '', '42', '总监2001', '1', '管理员', '1399885894', '1', '0', '1');
 INSERT INTO `oa_message` VALUES ('56', '123333333333', '', '1', '管理员', '42', '总监2001', '1402727322', '1', '0', '1');
 INSERT INTO `oa_message` VALUES ('57', '123333333333', '', '1', '管理员', '42', '总监2001', '1402727322', '42', '0', '0');
-INSERT INTO `oa_message` VALUES ('58', 'XXXXXXXXXXXXXXXXXXXXXX', '', '1', '管理员', '0', '小微企业', '1402727412', '1', '0', '1');
-INSERT INTO `oa_message` VALUES ('59', 'XXXXXXXXXXXXXXXXXXXXXX', '', '1', '管理员', '0', '小微企业', '1402727412', '0', '0', '0');
+INSERT INTO `oa_message` VALUES ('58', 'XXXXXXXXXXXXXXXXXXXXXX', '', '1', '管理员', '0', '企业', '1402727412', '1', '0', '1');
+INSERT INTO `oa_message` VALUES ('59', 'XXXXXXXXXXXXXXXXXXXXXX', '', '1', '管理员', '0', '企业', '1402727412', '0', '0', '0');
 INSERT INTO `oa_message` VALUES ('60', 'sssssssssssssssssssssssssssssssssssss', '', '60', '员工5005', '0', '管理员', '1402727449', '60', '0', '1');
 INSERT INTO `oa_message` VALUES ('61', 'sssssssssssssssssssssssssssssssssssss', '', '60', '员工5005', '0', '管理员', '1402727449', '0', '0', '0');
 INSERT INTO `oa_message` VALUES ('62', 'sssssssssssssssssss', '', '1', '管理员', '67', '李白/副总', '1402727541', '1', '0', '0');
@@ -872,8 +872,8 @@ INSERT INTO `oa_message` VALUES ('72', 'xxxxxxxxxxxxxxxx', '', '1', '管理员',
 INSERT INTO `oa_message` VALUES ('73', 'xxxxxxxxxxxxxxxx', '', '1', '管理员', '60', '员工5005', '1402727992', '60', '0', '1');
 INSERT INTO `oa_message` VALUES ('74', 'sssssssssssss', '', '1', '管理员', '41', '总监2002', '1404046714', null, '0', '0');
 INSERT INTO `oa_message` VALUES ('75', 'sssssssssssss', '', '1', '管理员', '41', '总监2002', '1404046714', null, '0', '0');
-INSERT INTO `oa_message` VALUES ('76', 'asdfasdfasdf', '', '1', '管理员', '1', '管理员', '1415006873', '1', '0', '0');
-INSERT INTO `oa_message` VALUES ('77', 'asdfasdfasdf', '', '1', '管理员', '1', '管理员', '1415006873', '1', '0', '0');
+INSERT INTO `oa_message` VALUES ('76', 'asdfasdfasdf', '', '1', '管理员', '1', '管理员', '1415006873', '1', '0', '1');
+INSERT INTO `oa_message` VALUES ('77', 'asdfasdfasdf', '', '1', '管理员', '1', '管理员', '1415006873', '1', '0', '1');
 
 -- ----------------------------
 -- Table structure for oa_monthly_report
@@ -1060,7 +1060,7 @@ INSERT INTO `oa_node` VALUES ('190', '消息', 'message/index', 'fa fa-inbox bc-
 INSERT INTO `oa_node` VALUES ('191', '用户设置', '', '', '', '', '', '198', '0');
 INSERT INTO `oa_node` VALUES ('192', '用户资料', 'profile/index', '', '', '', '', '191', '0');
 INSERT INTO `oa_node` VALUES ('193', '修改密码', 'profile/password', '', '', '', '', '191', '0');
-INSERT INTO `oa_node` VALUES ('194', '用户设置', 'UserConfig/index', '', '', '', '999', '191', '0');
+INSERT INTO `oa_node` VALUES ('194', '用户设置', 'UserConfig/index', '', '', '', '999', '191', '1');
 INSERT INTO `oa_node` VALUES ('195', '项目', 'xmk/index##', '', 'XmkFolder', '', '1', '197', '0');
 INSERT INTO `oa_node` VALUES ('196', '项目库管理', 'xmk_folder/index', '', '', '', '1', '195', '0');
 INSERT INTO `oa_node` VALUES ('197', '定制', 'xmk/index', 'fa fa-wrench', '', '', '91', '0', '1');
@@ -1792,12 +1792,13 @@ CREATE TABLE `oa_system_folder` (
   `is_del` tinyint(3) NOT NULL DEFAULT '0',
   `remark` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oa_system_folder
 -- ----------------------------
 INSERT INTO `oa_system_folder` VALUES ('66', '0', 'DocFolder', '虎豹骑论坛项目', '总经理1001/总经理|1001;基于B/S架构的在线OA系统                          |dept_1;', '', '', '', '0', '');
+INSERT INTO `oa_system_folder` VALUES ('67', '0', 'ForumFolder', '测试论坛标题', '总经理1001/总经理|1001;基于B/S架构的在线OA系统                          |dept_1;', '', '', '', '0', '');
 
 -- ----------------------------
 -- Table structure for oa_system_tag
@@ -2202,7 +2203,7 @@ CREATE TABLE `oa_user` (
 -- ----------------------------
 -- Records of oa_user
 -- ----------------------------
-INSERT INTO `oa_user` VALUES ('1', 'admin', '管理员', 'GLY', '21232f297a57a5a743894a0e4a801fc3', '1', '1', '2', 'male', '2013-09-18', '0.0.0.0', '2840', 'emp_pic/1.jpeg', '123', '1231254123123', '5086-2222-2222', '12123123', '1222907803', '1451975357', '0', '1231512315123', '1');
+INSERT INTO `oa_user` VALUES ('1', 'admin', '管理员', 'GLY', '21232f297a57a5a743894a0e4a801fc3', '1', '1', '2', 'male', '2013-09-18', '0.0.0.0', '2841', 'emp_pic/1.jpeg', '123', '1231254123123', '5086-2222-2222', '12123123', '1222907803', '1451975357', '0', '1231512315123', '1');
 INSERT INTO `oa_user` VALUES ('41', '2002', '总监2002', 'ZJ', '4ba29b9f9e5732ed33761840f4ba6c53', '6', '3', '1', 'male', '2013-10-30', '0.0.0.0', null, '', '', '行政，财务', '', '', '1376896154', '1407565312', '1', null, '1');
 INSERT INTO `oa_user` VALUES ('42', '2001', '总监2001', 'ZJ', 'd0fb963ff976f9c37fc81fe03c21ea7b', '8', '3', '1', 'male', '2013-10-10', '127.0.0.1', null, 'emp_pic/42.jpeg', 'smeoa@qq.com', '开发', '123', '12312312', '1380970837', '1401287019', '0', '12312541231251243123', '1');
 INSERT INTO `oa_user` VALUES ('43', '2003', '总监2003', 'ZJ', 'a591024321c5e2bdbd23ed35f0574dde', '7', '3', '1', 'male', '0000-00-00', '127.0.0.1', null, 'emp_pic/43.jpeg', '', '销售', '', '', '1381035116', '1401287063', '0', null, '1');
