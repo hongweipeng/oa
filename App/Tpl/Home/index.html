@@ -12,9 +12,6 @@
 						<div class="widget-toolbar no-border">
 							<ul class="nav nav-tabs" id="myTab">
 								<li class="active">
-									<a data-toggle="tab" href="#mail-new">最新</a>
-								</li>
-								<li>
 									<a data-toggle="tab" href="#mail-unread">未读</a>
 								</li>
 							</ul>
@@ -23,17 +20,7 @@
 					<div class="widget-body">
 						<div class="widget-main">
 							<div class="tab-content">
-								<div id="mail-new" class="tab-pane in active ul_table">
-									<ul>
-										<volist name="new_mail_list" id="vo">
-											<li>
-												<span class="pull-right hidden-phone">{$vo.create_time|toDate='m-d'}</span>
-												<span  class="auto autocut"> <a url="{:U('mail/read','id='.$vo['id'])}" node="85" return_url="{:U('mail/folder/','fid=inbox')}" onclick="click_home_list(this)">{$vo.name}</a> </span>
-											</li>
-										</volist>
-									</ul>
-								</div>
-								<div id="mail-unread" class="tab-pane ul_table">
+								<div id="mail-unread" class="tab-pane ul_table active">
 									<ul>
 										<volist name="unread_mail_list" id="vo">
 											<li>
