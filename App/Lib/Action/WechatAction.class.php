@@ -65,7 +65,7 @@ class WechatAction extends Action {
 							$html = $this->getTaskHtml();
 							$reply = array ( $html, 'text' );
 						} else {
-							$reply = array ( '欢迎使用小微OA服务号', 'text'  );
+							$reply = array ( '欢迎使用OA服务号', 'text'  );
 						}
 						break;
 				}
@@ -125,7 +125,7 @@ class WechatAction extends Action {
 
 		$oauth_url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=$app_id&redirect_uri={$site_url}{$redirect_uri}&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
 			
-		$sub1 = array('type'=>'view','name'=>'小微OA','url'=>$oauth_url);
+		$sub1 = array('type'=>'view','name'=>'OA','url'=>$oauth_url);
 		$sub2 = array('type'=>'click','name'=>'签到','key'=>'sign_up');
 		$sub3 =  array('name'=>'帮助','sub_button'=>$subs3);
 
@@ -149,8 +149,8 @@ class WechatAction extends Action {
 	 */
 	private function getSubscribe($openid = ''){
 		$re = "";
-		$re .= "您好，欢迎关注小微企业OA微信公众号。为了让您能方便快捷的使用小微企业OA";
-		$re .= "请先确认您在小微OA系统中有帐号，并进行微信号码绑定，绑定后后可以直接进入小微OA";
+		$re .= "您好，欢迎关注企业OA微信公众号。为了让您能方便快捷的使用企业OA";
+		$re .= "请先确认您在OA系统中有帐号，并进行微信号码绑定，绑定后后可以直接进入OA";
 		$re .= "<a href='".C("SITE_URL")."/wechat/oauth/?openid={$openid}'>点击立即进行绑定</a>";
 		return array ( $re, 'text' );
 	}
@@ -185,7 +185,7 @@ class WechatAction extends Action {
 					break;
 				case 'ites_intro' : // 功能介绍
 					$re = "";
-					$re .= "您好，欢迎关注小微OA微信公众服务号。您可以回复以下数字了解您想了解的信息：\n";
+					$re .= "您好，欢迎关注OA微信公众服务号。您可以回复以下数字了解您想了解的信息：\n";
 					$re .= "1: 任务提醒\n";
 					$re .= "2: 查看我申请的任务\n";
 					$re .= "3: 查看邀请我的任务\n";
